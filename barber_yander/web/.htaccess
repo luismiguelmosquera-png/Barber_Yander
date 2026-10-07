@@ -1,0 +1,18 @@
+# =========================================================
+# CONFIGURACIÓN APACHE — BARBERÍA YANDER
+# =========================================================
+
+DirectoryIndex index.html index.php
+
+# Página de error 404 personalizada
+ErrorDocument 404 /404.html
+
+# Proteger archivos sensibles
+<FilesMatch "^(\.env|\.sql|\.log|composer\.json|package\.json)$">
+    Require all denied
+</FilesMatch>
+
+# Habilitar compresión básica y tipos MIME
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>

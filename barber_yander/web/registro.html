@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - Barbería Yander</title>
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/registro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO / NAVBAR (HOMOLOGADO) ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/banner.jpeg" alt="Logo Barber Yander">
+      <h1>Barber Yander</h1>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Servicios ▾</button>
+        <div class="dropdown-content">
+          <a href="index.html#servicios-barba">Barba</a>
+          <a href="index.html#servicios-corte">Corte</a>
+          <a href="index.html#servicios-combos">Combos</a>
+          <a href="index.html#servicios-cejas">Cejas</a>
+          <a href="index.html#servicios-tintura">Tintura</a>
+          <a href="index.html#servicios-premium">Servicio Premium</a>
+        </div>
+      </div>
+
+      <a href="muestra_trabajo.html">Galería</a>
+      <a href="login.html" class="login-link">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- ===== FORMULARIO ===== -->
+  <section class="registro-section">
+    <div class="registro-box">
+      <h2>📝 Registro de Usuario</h2>
+
+      <form id="registroForm" autocomplete="on">
+        <div class="form-row">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+          <input type="email" id="usuario" name="usuario" placeholder="Correo electrónico" autocomplete="email" required>
+        </div>
+
+        <div class="form-row">
+          <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" maxlength="10" required>
+          <select id="tipo_doc" name="tipo_doc" required>
+            <option value="">Tipo de documento</option>
+            <option value="cc">Cédula de Ciudadanía</option>
+            <option value="ti">Tarjeta de Identidad</option>
+            <option value="ce">Cédula de Extranjería</option>
+          </select>
+        </div>
+
+        <input type="text" id="num_doc" name="num_doc" placeholder="Número de documento" required>
+
+        <div class="form-row">
+          <input type="password" id="password" name="password" placeholder="Contraseña" maxlength="50" autocomplete="new-password" required>
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar contraseña" maxlength="50" autocomplete="new-password" required>
+        </div>
+
+        <button type="submit" class="btn-registrar" id="btnSubmitRegistro">Registrar Usuario</button>
+
+        <p class="link-login">
+          ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Barbería Yander — Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/notificaciones.js"></script>
+  <script src="js/registro.js"></script>
+</body>
+</html>

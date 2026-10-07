@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Contraseña - Barber Yander</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/recuperar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO / NAVBAR (HOMOLOGADO) ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/banner.jpeg" alt="Logo Barber Yander">
+      <h1>Barber Yander</h1>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Servicios ▾</button>
+        <div class="dropdown-content">
+          <a href="index.html#servicios-barba">Barba</a>
+          <a href="index.html#servicios-corte">Corte</a>
+          <a href="index.html#servicios-combos">Combos</a>
+          <a href="index.html#servicios-cejas">Cejas</a>
+          <a href="index.html#servicios-tintura">Tintura</a>
+          <a href="index.html#servicios-premium">Servicio Premium</a>
+        </div>
+      </div>
+
+      <a href="muestra_trabajo.html">Galería</a>
+      <a href="login.html" class="login-link">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENEDOR DE RECUPERACIÓN ===== -->
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Recuperar Contraseña</h2>
+      <p class="subtitle" id="recuperarSubtitulo">Ingresa tu correo para recibir un código de verificación</p>
+
+      <!-- PASO 1: SOLICITAR CÓDIGO POR CORREO -->
+      <form id="formPaso1">
+        <div class="input-group">
+          <label for="usuario">Correo electrónico registrado</label>
+          <input type="email" id="usuario" name="usuario" placeholder="correo@ejemplo.com" maxlength="100" autocomplete="email" required>
+        </div>
+        <button type="submit" class="btn-login" id="btnEnviarCodigo">Enviar Código de Verificación</button>
+      </form>
+
+      <!-- PASO 2: INGRESAR CÓDIGO DE 6 DÍGITOS Y NUEVA CONTRASEÑA -->
+      <form id="formPaso2" style="display: none;" autocomplete="on">
+        <div class="input-group">
+          <label for="correoConfirmado">Correo electrónico</label>
+          <input type="email" id="correoConfirmado" name="correoConfirmado" readonly style="opacity: 0.8; cursor: not-allowed;">
+        </div>
+
+        <div class="input-group">
+          <label for="codigoVerificacion">Código de verificación (6 dígitos)</label>
+          <input type="text" id="codigoVerificacion" name="codigoVerificacion" placeholder="123456" maxlength="6" pattern="\d{6}" inputmode="numeric" style="letter-spacing: 4px; font-weight: bold; text-align: center; font-size: 1.1rem;" required>
+        </div>
+
+        <div class="input-group">
+          <label for="nuevaContrasena">Nueva contraseña</label>
+          <input type="password" id="nuevaContrasena" name="nuevaContrasena" placeholder="Mínimo 4 caracteres" maxlength="50" autocomplete="new-password" required>
+        </div>
+
+        <div class="input-group">
+          <label for="confirmarNuevaContrasena">Confirmar nueva contraseña</label>
+          <input type="password" id="confirmarNuevaContrasena" name="confirmarNuevaContrasena" placeholder="Repite la contraseña" maxlength="50" autocomplete="new-password" required>
+        </div>
+
+        <button type="submit" class="btn-login" id="btnVerificarCodigo">Restablecer Contraseña</button>
+        
+        <button type="button" class="btn-login" id="btnReenviarCodigo" style="background: transparent; color: var(--gold-light); border: 1px solid var(--border-card); margin-top: 10px; box-shadow: none;">Reenviar Código</button>
+      </form>
+
+      <div class="register-link">
+        <a href="login.html">Volver al inicio de sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/notificaciones.js"></script>
+  <script src="js/recuperar.js"></script>
+</body>
+</html>

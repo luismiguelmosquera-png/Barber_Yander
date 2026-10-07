@@ -1,0 +1,7 @@
+.git
+.gitignore
+cloudflared.exe
+*.exe
+*.log
+barber_yander/.env
+barber_yander/barber_yander.sql

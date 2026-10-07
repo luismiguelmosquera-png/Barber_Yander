@@ -1,0 +1,270 @@
+/* =========================================================
+   BARBERÍA YANDER — NAVBAR / ENCABEZADO UNIFICADO
+   Exactamente idéntico en todas las páginas públicas
+   Totalmente adaptativo y ultra-responsivo
+   ========================================================= */
+
+header.navbar,
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: rgba(10, 11, 14, 0.94) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 14px 40px !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  z-index: 1000 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
+  box-sizing: border-box !important;
+}
+
+.logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+
+.logo img {
+  height: 46px !important;
+  width: 46px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  object-fit: cover !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+
+.logo h1 {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #ffffff 40%, #f3c64f 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  letter-spacing: 0.5px !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+nav a {
+  color: #9ca3af !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  transition: all 0.25s ease !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+nav a:hover {
+  color: #f3c64f !important;
+}
+
+nav .login-link {
+  background: linear-gradient(135deg, #f3c64f 0%, #d4af37 100%) !important;
+  color: #0b0c10 !important;
+  font-weight: 700 !important;
+  padding: 8px 18px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 3px 12px rgba(212, 175, 55, 0.3) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+nav .login-link:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+  filter: brightness(1.05) !important;
+}
+
+/* MENÚ DESPLEGABLE (SERVICIOS) */
+.dropdown {
+  position: relative !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+
+.dropbtn {
+  background: none !important;
+  border: none !important;
+  color: #9ca3af !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: 0.25s !important;
+  font-family: inherit !important;
+  padding: 8px 0 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.dropdown:hover .dropbtn,
+.dropbtn:hover {
+  color: #f3c64f !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background: rgba(18, 20, 28, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(212, 175, 55, 0.25) !important;
+  border-radius: 12px !important;
+  min-width: 190px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+  padding: 8px 0 !important;
+  z-index: 1050 !important;
+}
+
+.dropdown-content a {
+  color: #f3f4f6 !important;
+  padding: 10px 18px !important;
+  display: block !important;
+  font-size: 0.9rem !important;
+  transition: 0.2s !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  white-space: nowrap !important;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none !important;
+}
+
+.dropdown-content a:hover {
+  background: rgba(212, 175, 55, 0.12) !important;
+  color: #f3c64f !important;
+  padding-left: 22px !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+/* RESPONSIVE NAVBAR: TABLETS Y PANTALLAS MEDIANAS */
+@media (max-width: 900px) {
+  header.navbar,
+  .navbar {
+    padding: 12px 20px !important;
+  }
+
+  nav {
+    gap: 14px !important;
+  }
+
+  .logo img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem !important;
+  }
+
+  nav a,
+  .dropbtn {
+    font-size: 0.88rem !important;
+  }
+
+  nav .login-link {
+    padding: 7px 15px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* RESPONSIVE NAVBAR: MÓVILES (Evita cortes de palabras) */
+@media (max-width: 650px) {
+  header.navbar,
+  .navbar {
+    padding: 10px 12px !important;
+  }
+
+  .logo {
+    gap: 8px !important;
+  }
+
+  .logo img {
+    height: 34px !important;
+    width: 34px !important;
+    border-radius: 8px !important;
+  }
+
+  .logo h1 {
+    font-size: 1rem !important;
+  }
+
+  nav {
+    gap: 8px !important;
+  }
+
+  nav a,
+  .dropbtn {
+    font-size: 0.78rem !important;
+    padding: 4px 5px !important;
+  }
+
+  nav .login-link {
+    padding: 6px 11px !important;
+    font-size: 0.76rem !important;
+    border-radius: 14px !important;
+  }
+}
+
+/* RESPONSIVE NAVBAR: MÓVILES PEQUEÑOS Y PANELES ESTRECHOS */
+@media (max-width: 420px) {
+  header.navbar,
+  .navbar {
+    padding: 8px 8px !important;
+  }
+
+  .logo {
+    gap: 6px !important;
+  }
+
+  .logo img {
+    height: 28px !important;
+    width: 28px !important;
+  }
+
+  .logo h1 {
+    font-size: 0.85rem !important;
+  }
+
+  nav {
+    gap: 5px !important;
+  }
+
+  nav a,
+  .dropbtn {
+    font-size: 0.7rem !important;
+    padding: 3px 4px !important;
+  }
+
+  nav .login-link {
+    padding: 5px 8px !important;
+    font-size: 0.7rem !important;
+  }
+}

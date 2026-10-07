@@ -1,0 +1,293 @@
+/* =========================================================
+   BARBERÍA YANDER — LOGIN (LUXURY DARK GLASSMORPHISM)
+   ========================================================= */
+
+:root {
+  --bg-main: #0a0b0e;
+  --bg-card: rgba(18, 20, 28, 0.88);
+  --border-card: rgba(212, 175, 55, 0.25);
+  --gold-main: #d4af37;
+  --gold-light: #f3c64f;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #151724 0%, var(--bg-main) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-main);
+  padding: 105px 20px 40px;
+}
+
+/* --- Navbar --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 11, 14, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card);
+  object-fit: cover;
+}
+
+.logo h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff 40%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--gold-light);
+}
+
+nav .login-link {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-main) 100%);
+  color: #0b0c10 !important;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 20px;
+  box-shadow: 0 3px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* MENÚ DESPLEGABLE */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropbtn:hover {
+  color: var(--gold-light);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(18, 20, 28, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  min-width: 170px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  padding: 8px 0;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: var(--text-main);
+  padding: 9px 16px;
+  display: block;
+  font-size: 0.88rem;
+}
+
+.dropdown-content a:hover {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold-light);
+  padding-left: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- Login Box --- */
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 80px;
+}
+
+.login-box {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.12);
+  text-align: center;
+}
+
+.login-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #fff 30%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 16px;
+  background: #181a24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: var(--gold-main);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  background: #1e202e;
+}
+
+.input-group select option {
+  background: #181a24;
+  color: #fff;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-main) 100%);
+  color: #0b0c10;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  margin-top: 8px;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+  filter: brightness(1.05);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+}
+
+.forgot-password {
+  margin-top: 15px;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  transition: 0.2s;
+}
+
+.forgot-password a:hover {
+  color: var(--gold-light);
+}
+
+.register-link {
+  margin-top: 22px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.register-link a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    padding: 30px 22px;
+  }
+}

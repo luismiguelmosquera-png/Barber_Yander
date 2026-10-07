@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada — Barber Yander</title>
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a0b0e;
+      color: #fff;
+    }
+    .error-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 40px;
+      background: radial-gradient(circle at center, #1e1b18 0%, #0a0b0e 100%);
+      box-sizing: border-box;
+    }
+    .error-code {
+      font-size: 6rem;
+      font-weight: 800;
+      color: #d4af37;
+      letter-spacing: 4px;
+      margin: 0;
+      text-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+      line-height: 1;
+    }
+    .error-icon {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+      animation: spin-slow 8s linear infinite;
+    }
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .error-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 15px 0 10px;
+      color: #f5f5f5;
+    }
+    .error-desc {
+      font-size: 0.95rem;
+      color: #a0a0a0;
+      max-width: 480px;
+      margin: 0 auto 26px;
+      line-height: 1.5;
+    }
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #d4af37, #aa820a);
+      color: #111;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    }
+    .btn-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.45);
+      background: linear-gradient(135deg, #e5c158, #c2950e);
+    }
+    @media (max-width: 600px) {
+      .error-container {
+        padding: 90px 16px 30px;
+      }
+      .error-code {
+        font-size: 4.2rem;
+      }
+      .error-title {
+        font-size: 1.3rem;
+      }
+      .error-desc {
+        font-size: 0.88rem;
+      }
+      .btn-home {
+        padding: 10px 22px;
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">
+      <img src="/img/banner.jpeg" alt="Logo Barber Yander">
+      <h1>Barber Yander</h1>
+    </a>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/galeria">Galería</a>
+      <a href="/login" class="login-link">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <main class="error-container">
+    <div class="error-icon">💈</div>
+    <h1 class="error-code">404</h1>
+    <h2 class="error-title">¡Ups! Corte fuera de lugar</h2>
+    <p class="error-desc">La página que estás buscando no existe o ha sido movida. Regresa a nuestro sitio principal para descubrir todos nuestros servicios y agendar tu cita.</p>
+    <a href="/" class="btn-home">
+      <span>Volver al Inicio</span>
+      <span>➔</span>
+    </a>
+  </main>
+</body>
+</html>
